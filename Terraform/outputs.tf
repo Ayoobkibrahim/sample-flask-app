@@ -3,7 +3,8 @@ output "github_actions_role_arn" {
 }
 
 output "ecs_service_arn" {
-  value = aws_ecs_service.app.arn
+  value       = aws_ecs_service.app.id
+  description = "ECS service ARN (same as resource id in this AWS provider version)"
 }
 
 output "public_subnet_ids" {

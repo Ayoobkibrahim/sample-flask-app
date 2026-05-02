@@ -40,7 +40,7 @@ resource "aws_iam_role_policy" "deploy" {
       Sid      = "EcsDeployThisServiceOnly"
       Effect   = "Allow"
       Action   = ["ecs:UpdateService", "ecs:DescribeServices"]
-      Resource = aws_ecs_service.app.arn
+      Resource = aws_ecs_service.app.id
     }]
   })
 }

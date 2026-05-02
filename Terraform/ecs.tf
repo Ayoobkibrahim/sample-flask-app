@@ -33,7 +33,7 @@ resource "aws_ecs_task_definition" "app" {
   memory                   = "512"
   execution_role_arn       = aws_iam_role.ecs_task_execution.arn
 
-  container_definitions = jsonencode({
+  container_definitions = jsonencode([{
     name      = "app"
     image     = var.docker_image
     essential = true
@@ -42,7 +42,7 @@ resource "aws_ecs_task_definition" "app" {
       hostPort      = 5000
       protocol      = "tcp"
     }]
-  })
+  }])
 
   tags = { Task = "3-49" }
 }
