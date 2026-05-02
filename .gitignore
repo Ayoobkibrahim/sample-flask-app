@@ -1,0 +1,33 @@
+# Terraform
+Terraform/.terraform/
+Terraform/*.tfstate
+Terraform/*.tfstate.*
+Terraform/.terraform.lock.hcl
+Terraform/terraform.tfvars
+Terraform/crash.log
+Terraform/override.tf
+Terraform/override.tf.json
+*_override.tf
+*_override.tf.json
+Terraform/.terraformrc
+Terraform/terraform.rc
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Local env files
+*.local
